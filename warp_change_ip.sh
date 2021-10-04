@@ -1,8 +1,7 @@
 #bin/bash!
 
-#This is a script for warp
-#You can use it to change your IP of warp which was blocked by Netflix
-#Thanks to lmc999
+#Github @luoxue_bot
+#Blog https://ty.al
 
 UA_Browser="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36"
 read -r -p "Is warp installed? [y/n] " input
