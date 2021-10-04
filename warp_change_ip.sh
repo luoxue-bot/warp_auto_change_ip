@@ -34,7 +34,7 @@ do
         fi
 
     elif  [[ "$result" == "000" ]];then
-	    echo -e "Failed, retrying..."
+	echo -e "Failed, retrying..."
         systemctl restart wg-quick@wgcf
     fi
 done
