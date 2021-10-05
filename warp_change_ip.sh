@@ -41,3 +41,4 @@ done
 if [[ "$input" == "n" ]]
     bash <(curl -fsSL git.io/warp.sh) 4
     return
+fi
