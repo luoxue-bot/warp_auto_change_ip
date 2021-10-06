@@ -15,7 +15,8 @@ After the changeing is completed, it will continue to monitor (every 10s, you ca
 If you need one-time use, change sleep 10 to break.
 
 ## How to use
-
+```bash
 wget https://github.com/luoxue-bot/warp_auto_change_ip/raw/main/warp_change_ip.sh && chmod +x warp_change_ip.sh && ./warp_change_ip.sh
+```
 
 PS：Will use the result of directly executing curl to Netflix as a benchmark.
