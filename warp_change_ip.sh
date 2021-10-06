@@ -5,12 +5,12 @@
 
 UA_Browser="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36"
 read -r -p "Is warp installed? [y/n] " input
-read -r -p "Input the region you want(e.g. HK,SG):" area
 if [[ "$input" == "n" ]];then
     bash <(curl -fsSL https://github.com/luoxue-bot/warp.sh/raw/main/warp.sh) 4
 fi
 while [[ "$input" == "y" ]]
 do
+    read -r -p "Input the region you want(e.g. HK,SG):" area
     result=$(curl --user-agent "${UA_Browser}" -fsL --write-out %{http_code} --output /dev/null --max-time 10 "https://www.netflix.com/title/81215567" 2>&1)
     if [[ "$result" == "404" ]];then
         echo -e "Originals Only, Changing IP..."
