@@ -8,7 +8,6 @@ read -r -p "Is warp installed? [y/n] " input
 read -r -p "Input the region you want(e.g. HK,SG):" area
 if [[ "$input" == "n" ]];then
     bash <(curl -fsSL https://github.com/luoxue-bot/warp.sh/raw/main/warp.sh) 4
-    return
 fi
 while [[ "$input" == "y" ]]
 do
