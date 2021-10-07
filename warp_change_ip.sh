@@ -7,7 +7,7 @@ UA_Browser="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 read -r -p "Is warp installed? [y/n] " input
 if [[ "$input" == "n" ]];then
     bash <(curl -fsSL https://github.com/luoxue-bot/warp.sh/raw/main/warp.sh) 4
-elif [[ "$input" == "y" ]]
+elif [[ "$input" == "y" ]];then
     read -r -p "Input the region you want(e.g. HK,SG):" area
 fi
 while [[ "$input" == "y" ]]
