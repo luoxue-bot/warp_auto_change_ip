@@ -4,7 +4,7 @@
 #Blog https://ty.al
 
 region_area(){
-	region=$(curl --user-agent "${UA_Browser}" -fs --max-time 10 --write-out %{redirect_url} --output /dev/null "https://www.netflix.com/title/80018499" | sed 's/.*com\/\([^-]\{1,\}\).*/\1/g')
+	region=$(curl --user-agent "${UA_Browser}" -fs --max-time 10 --write-out %{redirect_url} --output /dev/null "https://www.netflix.com/title/80018499" | sed 's/.*com\/\([^-]*\).*/\1/g')
 	region=${region:-US}
 
 	area2=("${area}" "*")
@@ -36,5 +36,5 @@ while [[ -n $(wg) ]]; do
 		for ((i=0; i<${#output[@]}; i++)); do
 			[[ "$result" == ${output[i]} ]] && break
 		done
-	echo -e ${display1[i]} && (${cmd1[i]}; sleep ${sleep_sec1[i]})
+	echo -e ${display1[i]}; ${cmd1[i]}; sleep ${sleep_sec1[i]}
 done
